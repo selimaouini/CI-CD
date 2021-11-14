@@ -1,0 +1,15 @@
+---
+# tasks file for docker-registry.
+
+
+- name: Log into DockerHub
+  docker_login:
+    username: medselimaouini
+    password: 27641600-f18f-4163-95f3-9ea162190abe
+
+- name: Tag and push to docker hub
+  docker_image:
+    name: pipeline:latest
+    repository: medselimaouini/pipeline
+    tag: end 
+    push: yes
