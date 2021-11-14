@@ -9,7 +9,7 @@
 
 - name: Tag and push to docker hub
   docker_image:
-    name: pipeline:latest
+    name: project1:latest
     repository: medselimaouini/pipeline
     tag: end 
     push: yes
