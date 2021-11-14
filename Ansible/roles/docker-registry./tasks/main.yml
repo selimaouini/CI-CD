@@ -10,6 +10,6 @@
 - name: Tag and push to docker hub
   docker_image:
     name: medselimaouini/pipeline
-    repository: medselimaouini/pipeline
+    repository: projet1
     tag: fin 
     push: yes
