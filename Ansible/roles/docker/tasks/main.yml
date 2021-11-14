@@ -12,7 +12,7 @@
 - name: run container docker
   docker_container:
     name: myapp_container
-    image: projet:latest
+    image: projet1:latest
     state: started
     recreate: true
     ports:
