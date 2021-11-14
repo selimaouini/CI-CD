@@ -1,0 +1,34 @@
+ pipeline {
+  agent any
+    stages {
+        stage('Pull') {
+             steps{
+                script{
+                    checkout([$class: 'GitSCM', branches: [[name: '*/master']],
+                        userRemoteConfigs: [[
+                            credentialsId: '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',
+                            url: 'https://github.com/selimaouini/ci-cd.git']]])
+                }
+            }
+        }
+ stage('npm-Install') {
+             steps{
+                script{
+                    sh "sudo npm install"
+                }
+            }
+        }
+
+      
+
+        stage('docker')
+{
+                  steps {
+                         script{
+                         sh "ansible-playbook Ansible/docker.yml -i Ansible/inventory/host.yml "
+                                }
+                        }
+  }
+
+}
+}
