@@ -11,5 +11,5 @@
   docker_image:
     name: project1:latest
     repository: medselimaouini/pipeline
-    tag: end 
+    tag: fin 
     push: yes
